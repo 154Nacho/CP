@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define NARRAY 7   // Array size
-#define NBUCKET 6  // Number of buckets
+#define NARRAY 15   // Array size
+#define NBUCKET 7  // Number of buckets
 #define INTERVAL 10  // Each bucket capacity
 
 struct Node {
@@ -140,7 +140,7 @@ void printBuckets(struct Node *list) {
 
 // Driver code
 int main(void) {
-  int array[NARRAY] = {42, 32, 33, 52, 37, 47, 51};
+  int array[NARRAY] = {42, 32, 10, 33, 52, 22, 37, 63, 47, 51, 5, 36, 1, 67, 53};
 
   printf("Initial array: ");
   print(array);
