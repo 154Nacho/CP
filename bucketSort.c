@@ -49,10 +49,11 @@ void BucketSort(int arr[],int nARRAY,int nBUCKET) {
   int i, j;
 
 
-  for (i = 0; i < nBUCKET ; ++i)
+  for (i = 0; i < nBUCKET ; ++i) {
       n_Buckets[i] = (int *)malloc(intervalo * sizeof(int));
       n_Buckets_MAX[i] = intervalo;
       n_Buckets_ATUAL[i] = 0;
+  }
       
   for (i = 0; i < nARRAY; ++i) {
     int posBucket = getBucketIndex(arr[i],intervalo);
@@ -104,8 +105,9 @@ int main(int argc,char **argv) {
   const int nARRAY = atoi(argv[1]);
   const int nBUCKET = atoi(argv[2]);
   int *array_Mega;
+  int i;
   array_Mega = malloc(nARRAY*sizeof(int));
-  for (int i = 0; i < nARRAY; i++) array_Mega[i] = rand() % nARRAY;
+  for (i = 0; i < nARRAY; i++) array_Mega[i] = rand() % nARRAY;
 
   printf("Initial array: ");
   print(array_Mega,nARRAY);
